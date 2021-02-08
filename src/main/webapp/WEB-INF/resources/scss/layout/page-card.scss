@@ -1,0 +1,69 @@
+.page-card {
+  background-color: $white;
+
+  .page-card__heading {
+    padding: 10px 20px;
+    position: relative;
+    background-color: $white;
+    border-bottom: 1px solid $dark-color;
+
+    .main-text {
+      margin-top: 5px;
+    }
+
+    .page-card__heading-actions {
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+          display: inline-block;
+          float: left;
+
+          a {
+            padding: 15px 18px;
+            display: block;
+            cursor: pointer;
+            border-left: 1px solid $dark-color;
+            color: $main-color;
+          }
+
+          a:hover {
+            background-color: $light-color;
+          }
+        }
+      }
+    }
+  }
+
+  .page-card__icon-area {
+    text-align: center;
+
+    img {
+      margin-top: -30px;
+    }
+  }
+
+  .page-card__body {
+    padding: 20px;
+    text-align: center;
+    background-color: $white;
+
+    label {
+      font-weight: bold;
+      font-size: 12px;
+      color: $main-color;
+    }
+
+    .input-group {
+      width: 100%;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+  }
+}

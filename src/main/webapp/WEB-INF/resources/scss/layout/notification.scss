@@ -1,0 +1,57 @@
+.notification-section {
+  color: $white;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1040;
+
+  .notification-section__header {
+    padding: 10px 10px;
+    text-align: center;
+    float: left;
+
+    .notification-section__header-icon {
+      font-size: 40px;
+      line-height: 0;
+    }
+
+    .notification-section__close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+      padding: 10px;
+    }
+  }
+
+  .notification-section__body {
+    padding: 13px 10px 10px 50px;
+    text-align: left;
+  }
+}
+
+.notification-section.success {
+  background: $primary-color;
+  background: linear-gradient(45deg, $primary-color-dark, $primary-color);
+}
+
+.notification-section.info {
+  background: $primary-color;
+  background: linear-gradient(45deg, $primary-color-dark, $primary-color);
+}
+
+.notification-section.failure {
+  background: $secondary-color;
+  background: linear-gradient(45deg, $secondary-color-dark, $secondary-color);
+}
+
+
+
+
+
+
+

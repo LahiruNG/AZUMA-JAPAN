@@ -1,0 +1,353 @@
+.card-view {
+	padding-top: 10px;
+
+	.card {				
+		background-color: #fff;
+		box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.11);
+		border: 1px solid #DADADA;
+		margin-bottom: 30px;
+
+		.card-header {
+			text-align: right;
+		    color: white;
+		    padding: 5px 10px;
+		    border-top: 3px solid #2ecc71;
+		    background-repeat: no-repeat;
+		    background-size: cover;
+		    position: relative;
+
+		    h4 {
+				font-family: 'raleway', sans-serif;
+			    font-weight: 100;
+			    text-align: center;
+			    margin-top: 5px;
+			    margin-bottom: 5px;
+			    text-shadow: 2px 1px rgba(0, 0, 0, 0.5);
+			}
+
+			.card-right-menu {
+				width: 20px;
+				margin-left: -20px;
+
+				.fa.menu-icon {
+					padding: 0 10px;
+				}
+			}
+
+			.dropdown {
+    			.fa {
+    				color: $light-color;
+    			}
+
+    			.dropdown-menu {
+					border-radius: 0;
+					top: 100%;
+					padding: 0;
+					left: -145px;				
+					@include box-shadow(0, 0px, 8px, rgba(0, 0, 0, 0.2));
+					@include transition(all 0.5s ease 0s);
+					max-height: 0;
+				    display: block;
+				    overflow: hidden;
+				    opacity: 0;
+
+					li {
+						text-shadow: none;
+
+						a {
+							padding: 8px 20px;
+							font-size: 12px;
+							margin-right: 0;
+						}
+					}
+    			}
+    		}
+
+    		.dropdown.open .dropdown-menu {
+				max-height: 233px;
+		    	opacity: 1;
+			}
+
+			.info {
+		    	text-align: left;
+				padding-bottom: 0px;
+
+				.date-id-info {
+					padding: 0;
+				
+					.created-date,
+					.app-id {
+						font-size: 11px;
+						background: rgba(0, 0, 0, 0.51);
+					    color: #fff;
+					    padding: 2px 7px;
+					    border-radius: 20px;					    
+					}
+
+					i {
+						color: #fff;
+					}
+				}
+		    }
+		}
+
+		.card-body {
+			height: 170px;
+
+			.creator-info {
+				background: $light-color;
+			    padding: 10px 10px 5px 10px;
+			    margin-top: 0;
+			    font-size: 12px;
+
+			    .card-header-mini-info {
+					text-align: center;
+	    			font-size: 12px;
+	    			padding-bottom: 5px;
+
+	    			.fa.soltura.app-type {
+	    				color: #2980b9;
+	    			}
+
+	    			.fa.tap-apis.app-type {
+	    				color: #2ecc71;
+	    			}
+
+	    			.fa.apptizer.app-type {
+					    color: #c0392b;
+					}
+
+	    			.fa.active.app-state {
+					    color: #2ecc71;
+					}
+
+					.fa.rejected.app-state {
+					    color: #EA6C5F;
+					}
+
+					.fa.pending.app-state {
+					    color: #feca57;
+					}
+
+					.fa.suspended.app-state {
+					    color: #777777;
+					}
+
+					.fa.limited.app-state {
+					    color: #526384;
+					}
+				}
+
+				.info {
+			    	text-align: center;
+					padding-bottom: 5px;
+
+					.created-date,
+					.app-id {
+						padding: 0;
+
+						i {
+							color: grey;
+							padding-right: 5px;
+						}
+					}
+			    }
+			}
+
+			.api-section {
+				border-top: 3px solid #D6D6D6;
+
+				h5 {
+					margin: 10px 0px 5px 0px;
+				}
+
+				.api {
+					display: inline-block;
+				    margin: 10px 0px;
+				    width: 70px;
+				    height: 60px;
+				    text-align: center;
+
+				    img {
+				    	width: 32px;
+    					height: auto;
+				    }
+
+				    p {
+				    	font-size: 10px;
+    					margin: 5px;
+				    }
+				}
+
+				.next-api {
+					display: inline-table;
+				    vertical-align: middle;
+				    height: 60px;
+				}
+			}
+		}
+
+		.card-footer {
+			height: 40px;
+			padding: 10px;
+		}
+
+		.user-image {
+			color: $light-color;
+		    text-align: center;
+		    margin-top: -30px;
+		    margin-left: auto;
+		    margin-right: auto;
+		    border: 3px solid $dark-color;
+		    padding: 9px 0 0 0px;
+		    position: relative;
+		    width: 50px;
+    		height: 50px;
+			@include border-radius(50px);
+			background-color: $primary-color;			
+			@include box-shadow(0, 1px, 2px, 0, rgba(0, 0, 0, 0.2));
+
+			h3 {
+				margin: 0;
+				font-weight: bold;
+			}
+		}
+	}
+
+	.card:hover {				
+		@include box-shadow(0, 2px, 8px, 0, rgba(0, 0, 0, 0.2));
+		@include transition(all 0.2s ease 0s);	
+	}
+
+	.bdapps {
+		.card-header {
+			border-top-color: $primary-color;
+    		background-image: url("../images/apps/bdapps-header.jpg");
+		}
+
+		.user-image {
+			background-color: $primary-color;
+		}
+	}
+
+    .bdappslite {
+		.card-header {
+			border-top-color: $secondary-color;
+    		background-image: url("../images/apps/bdappslite-header.jpg");
+		}
+
+		.user-image {
+			background-color: $secondary-color;
+		}
+	}
+
+    .card-hover {
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		top: -7px;
+		left: 15px;
+		z-index: 50;
+		opacity: 1;
+
+		span {
+			background-image: url("../images/apps/select-circle-white.png");
+		    background-repeat: no-repeat;
+		    height: 25px;
+		    width: 25px;
+		    font-size: 15px;
+		    margin-left: 5px;
+		    padding: 0 10px;
+		}
+
+		span.checked {
+			background-image: url("../images/apps/selected-small.png");
+			background-repeat: no-repeat;
+		    height: 25px;
+		    width: 25px;
+		    font-size: 15px;
+		    margin-left: 5px;
+		    margin-top: 12px;
+		    padding: 0 10px;
+		    display: block !important;
+
+		    input[type="checkbox"] {
+		    	margin-top: 4px;
+		    }
+		}
+
+		input[type="checkbox"] {
+			cursor: pointer;
+		    visibility: visible;
+		    width: 20px;
+		    height: 16px;
+		    box-sizing: border-box;
+		    padding: 0;
+		    margin-top: 12px;
+		    margin-left: -10px;
+		    opacity: 0;
+		}
+	}			
+}
+
+.create-new-app {
+  text-align: center;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  padding: 14px;
+  position: relative;
+  margin: 0 auto;
+  min-height: 232px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+	.card-view {
+		.card {
+			.card-header {
+				.info {
+					.date-id-info {
+						.created-date,
+						.app-id {
+							font-size: 10px;
+						}
+					}
+				}
+			}
+
+			.card-body {
+				.creator-info {
+					.card-header-mini-info {
+						font-size: 11px;
+					}
+				}
+
+				.api-section {
+					.api {
+						width: 60px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.card-view {
+		ul li {
+			display: block;
+			width: 100%;
+			margin: 0;
+		}
+
+		.card {
+			.card-body {
+				height: 190px;
+			}
+		}
+	}
+}
+
+

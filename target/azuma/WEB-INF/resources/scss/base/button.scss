@@ -1,0 +1,205 @@
+.btn {
+  padding: 10px 15px;
+  font-size: 12px;
+  border: 0;
+  letter-spacing: 1px;
+  @include border-radius(50px);
+  @include transition(all 0.2s ease 0s);
+}
+
+.btn:focus, .btn:hover {
+  color: $white;
+  @include box-shadow(0, 0, 10px, $main-color-light);
+}
+
+.btn:active {
+  @include box-shadow(0, 0, 10px, $main-color-light);
+}
+
+.small-btn {
+  padding: 8px 10px;
+  font-size: 12px;
+}
+
+.line-btn {
+  border: 1px solid $main-color-light;
+  color: $main-color-dark;
+  @include border-radius(2px);
+}
+
+button:focus,
+input:focus,
+select:focus {
+  outline: none !important;
+}
+
+.primary-btn {
+  color: $white;
+  background: $primary-color-dark;
+  background: linear-gradient(45deg, $primary-color-dark, $primary-color);
+}
+
+.primary-btn:hover {
+  background: $primary-color-dark;
+  background: linear-gradient(45deg, $primary-color-dark, $primary-color);
+}
+
+.secondary-btn {
+  color: $white;
+  background: $secondary-color;
+  background: linear-gradient(45deg, $secondary-color-dark, $secondary-color);
+}
+
+.secondary-btn:hover {
+  background: $secondary-color-dark;
+  background: linear-gradient(45deg, $secondary-color-dark, $secondary-color);
+}
+
+.secondary-action-btn {
+  background-color: $dark-color;
+  color: $main-color-dark;
+}
+
+.secondary-action-btn:hover,
+.secondary-action-btn:focus {
+  background-color: $dark-color;
+  color: $main-color-dark;
+}
+
+.transparent-btn {
+  background-color: transparent;
+}
+
+.btn-default {
+  color: $main-color-dark;
+  background-color: #eeeeee;
+  border: 0 !important;
+}
+
+.btn-default:hover, .btn-default:focus {
+  color: $main-color-dark;
+  border: 0 !important;
+}
+
+input[type='radio']:hover:before {
+  background: $primary-color;
+}
+
+input[type='radio']:checked:before {
+  background: $primary-color-dark;
+}
+
+input[type='radio']:before {
+  @include transition(all 0.2s ease 0s);
+}
+
+.filter-btn {
+  padding: 5px 0 5px 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: $main-color;
+  background-color: transparent;
+  border: 0;
+}
+
+//Checkbox button
+/* The container */
+.check-container {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  padding-top: 4px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-weight: normal;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.check-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark,
+.checkmark-radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: $light-color;
+  @include border-radius(3px);
+}
+
+.checkmark-radio {
+  @include border-radius(100px);
+}
+
+/* On mouse-over, add a grey background color */
+.check-container:hover input ~ .checkmark,
+.check-container:hover input ~ .checkmark-radio {
+  background-color: #ccc;
+}
+
+.check-container:hover input ~ .checkmark-radio {
+  @include border-radius(100px);
+}
+
+/* When the checkbox is checked, add a blue background */
+.check-container input:checked ~ .checkmark,
+.check-container input:checked ~ .checkmark-radio {
+  background-color: $primary-color;
+}
+
+.check-container input:disabled ~ .checkmark,
+.check-container input:disabled ~ .checkmark-radio {
+  background-color: $primary-color;
+}
+
+.check-container input:checked ~ .checkmark-radio {
+  @include border-radius(100px);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after,
+.checkmark-radio:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.check-container input:checked ~ .checkmark:after,
+.check-container input:checked ~ .checkmark-radio:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.check-container .checkmark:after {
+  left: 10px;
+  top: 7px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.check-container .checkmark-radio:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}

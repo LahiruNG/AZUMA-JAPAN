@@ -1,0 +1,67 @@
+/*Include here global reset like margin, paddings...*/
+
+a:hover,
+a:focus {
+  text-decoration: none !important;
+}
+
+.table-bordered>tbody>tr>td,
+.table-bordered>tbody>tr>th,
+.table-bordered>tfoot>tr>td,
+.table-bordered>tfoot>tr>th,
+.table-bordered>thead>tr>td,
+.table-bordered>thead>tr>th {
+  border: 1px solid #ddd;
+  border-right: 0;
+}
+
+.table-without-border.table>tbody>tr>td,
+.table-without-border.table>tbody>tr>th,
+.table-without-border.table>tfoot>tr>td,
+.table-without-border.table>tfoot>tr>th,
+.table-without-border.table>thead>tr>td,
+.table-without-border.table>thead>tr>th {
+  border-top: 0;
+  vertical-align: middle;
+}
+
+button:focus {
+  outline: none !important;
+}
+
+.nav-pills>li>a {
+  border-radius: 0;
+  color: #333333;
+  background-color: #f5f5f5;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+  color: #fff;
+  background-color: #F16E00;
+}
+
+.form-control {
+  width: 100%;
+  line-height: 30px;
+  padding: 4px 13px;
+  border: 1px solid #e5e5e5;
+  color: #666;
+  font-size: 13px;
+  clear: both;
+  display: block;
+  min-height: 42px;
+  border-radius: 0;
+  margin-bottom: 0;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  box-shadow: none;
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_default, .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current, .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box >div >div.xdsoft_current {
+  background: $primary-color-dark;
+  background: linear-gradient(45deg, $primary-color-dark, $primary-color);
+  box-shadow: $primary-color 0 1px 3px 0 inset;
+}

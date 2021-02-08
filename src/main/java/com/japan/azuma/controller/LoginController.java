@@ -11,7 +11,7 @@ public class LoginController {
     public String getLoginPage(Model model){
 
         model.addAttribute("name","Name-Data");
-        return "login";
+        return "signUp";
     }
 
 

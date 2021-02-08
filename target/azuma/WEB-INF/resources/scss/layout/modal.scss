@@ -1,0 +1,65 @@
+.modal {
+  .modal-header {
+    border-bottom: 0;
+    padding: 10px 15px;
+    background-color: $light-color;
+    position: relative;
+    border-bottom: 1px solid $dark-color;
+
+    .modal-title {
+      padding-top: 5px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: $main-color;
+    }
+
+    .close {
+      padding: 5px 10px;
+      @include border-radius(5px);
+      background-color: $dark-color;
+      position: absolute;
+      top: 13px;
+      right: 13px;
+    }
+  }
+
+  .modal-body__with-actions {
+    padding-top: 30px !important;
+  }
+
+  .modal-footer {
+    border: 1px solid $dark-color;
+  }
+}
+
+.modal {
+  .input-group-addon {
+    border: 1px solid $dark-color;
+    background-color: $light-color;
+  }
+}
+
+.modal .input-group {
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.modal .input-group-addon {
+  font-size: 13px;
+}
+
+.modal .input-group-addon.with-text {
+  min-width: 60px;
+}
+
+.responsive-modal .modal-dialog {
+  width: 380px !important;
+}
+
+.responsive-modal .modal-dialog:before {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,.5);
+}
