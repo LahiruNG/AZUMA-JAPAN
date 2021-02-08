@@ -1,0 +1,107 @@
+.login-back {
+  background-image: url(../images/main-back.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.login-overlay {
+  background-color: rgba(25,29,34,.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.login-page {
+  margin-bottom: 10px;
+  background-color: $white;
+  @include border-radius(10px);
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+
+  .login-header {
+    border-bottom: 1px solid $dark-color;
+    background-color: $light-color;
+    padding: 20px;
+    @include border-top-left-radius(10px);
+    @include border-top-right-radius(10px);
+  }
+
+  .login-body {
+    padding: 20px 20px 30px 20px;
+
+    .input-group {
+      margin-top: 20px;
+      margin-bottom: 3px;
+      width: 100%;
+
+      .input-group-addon {
+        border-left: 1px solid $main-color-light;
+        border-top: 1px solid $main-color-light;
+        border-bottom: 1px solid $main-color-light;
+        color: $main-color;
+        background-color: $light-color;
+        @include border-top-right-radius(0);
+        @include border-bottom-right-radius(0);
+
+        i {
+          width: 15px;
+        }
+      }
+
+      .form-control {
+        @include border-top-left-radius(0);
+        @include border-bottom-left-radius(0);
+      }
+    }
+
+    .input-group-btn {
+      .btn {
+        min-height: 40px;
+        margin-left: -2px;
+      }
+    }
+
+    .form-control {
+      box-shadow: none;
+      @include border-radius(3px);
+    }
+  }
+
+  .login-body__left-link {
+    text-align: left;
+  }
+
+  .login-body__right-link {
+    text-align: right;
+  }
+
+  .login-footer {
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+.login-page__footer {
+  color: $white;
+  background-color: transparent;
+
+  a {
+    color: $dark-color;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .login-body__right-link {
+    text-align: left;
+  }
+}
+
+

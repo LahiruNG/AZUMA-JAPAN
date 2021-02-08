@@ -1,0 +1,243 @@
+.search-bar {
+	input[type="text"] {
+		border-left: 0;
+		border-right: 0;
+		border-top: 0;
+		background-color: $light-color;
+		width: 85%;
+    	padding-left: 5px;
+    	padding-bottom: 5px;
+		margin: 5px 5px 15px 5px;
+		font-size: 12px;
+		border-bottom: 1px solid $dark-color;
+		@include transition(all 0.3s ease 0s);
+	}
+
+	input[type="text"]:focus {
+		outline: none;
+		border-bottom: 1px solid $primary-color;
+		@include transition(all 0.3s ease 0s);
+	}
+
+	.search-input {
+		color: $main-color;
+        padding-left: 0;
+
+		.dropdown {
+			a {
+				color: $main-color;
+			}
+
+			.fa-filter {
+				padding: 5px 5px 0 5px;
+			}
+		}
+
+		.dropdown-menu {
+			@include box-shadow(0, 0px, 8px, rgba(0, 0, 0, 0.2));
+			border-radius: 0;
+			top: -6%;
+			padding: 0;
+			left: 20px;
+
+			li {
+				a {
+					padding: 8px 20px;
+					font-size: 12px;
+				}
+			}
+		}
+		
+		.dropdown-menu:before {
+		    position: absolute;
+		    top: 5px;
+		    left: -8px;
+		    display: inline-block;
+		    border-top: 6px solid transparent;
+		    border-right: 7px solid #ccc;
+		    border-bottom: 6px solid transparent;
+		    content: '';
+		}
+
+		.dropdown-menu:after {
+			position: absolute;
+		    top: 5px;
+		    left: -6px;
+		    display: inline-block;
+		    border-top: 6px solid transparent;
+		    border-right: 6px solid #ffffff;
+		    border-bottom: 6px solid transparent;
+		    content: '';
+		}
+
+		.dropdown:hover .dropdown-menu {
+		    display: block;
+		    margin-top: 0;
+		}
+
+      span {
+        position: relative;
+      }
+		.filtered-by-id,
+		.filtered-by-name,
+		.filtered-by-creator {
+			color: $light-color;
+			font-size: 12px;
+            background-color: $primary-color;
+			padding: 3px 6px 3px 10px;
+			@include border-radius(50px);
+          position: absolute;
+          right: 20px;
+		}
+
+		.filter-close {
+			background-color: transparent;
+			padding: 3px;
+			margin-top: -1px;
+			@include border-radius(50px);
+		}
+
+		.filter-close:hover {
+			background-color: $primary-color-dark;
+			cursor: pointer;
+		}
+	}
+
+	.filtering-method {
+		.dropdown {
+			margin-left: -70px;
+			z-index: 50;
+		}
+	}
+	
+	.filter-menu {
+		.dropdown {
+			z-index: 40;
+
+			.dropdown-menu {
+				border-radius: 0;
+				top: 77%;
+				padding: 0;
+				@include box-shadow(0, 0px, 8px, rgba(0, 0, 0, 0.2));
+				@include transition(all 0.5s ease 0s);
+			    max-height: 0;
+			    display: block;
+			    overflow: hidden;
+			    opacity: 0;
+
+				li {
+					a {
+						padding: 8px 20px;
+						font-size: 12px;
+
+						.fa.initial.app-state {
+							color: $primary-color-dark;
+						}
+
+						.fa.draft.app-state, .fa.limited.app-state, .fa.suspended.app-state {
+							color: $secondary-color-dark;
+						}
+
+						.fa.pending.app-state {
+							color: $secondary-color;
+						}
+
+						.fa.scheduled.app-state {
+							color: #00d5c5;
+						}
+
+						.fa.active-production.app-state, .fa.active.app-state {
+							color: $primary-color;
+						}
+
+						.fa.rejected.app-state {
+							color: #ee5253;
+						}
+
+						.fa.paused.app-state {
+							color: #8395a7;
+						}
+
+						.fa.completed.app-state {
+							color: #025ba9;
+						}
+
+						.fa.bdapps.app-type {
+						    color: #2980b9;
+						}
+
+						.fa.bdappslite.app-type {
+						    color: #c0392b;
+						}
+					}
+				}
+			}
+		}
+
+		.any-api {
+			.dropdown-menu {
+				left: 0;
+			}
+		}
+
+		.any-status {
+			.dropdown-menu {
+				left: 0;
+			}
+		}
+
+		.any-type {
+			.dropdown-menu {
+				left: -40px;
+			}
+		}
+
+
+		.dropdown.open .dropdown-menu {
+			max-height: 300px;
+    		opacity: 1;
+		}
+		
+		.no-padding {
+			padding: 0;
+		}
+	}
+
+	.search-bar__action-btn {
+		margin-top: 25px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.search-bar {
+		.filtering-method {
+			.dropdown {
+				margin-left: 0;
+			}
+		}
+
+		.search-input {
+			.dropdown-menu {
+				left: -160px;
+			}
+
+			.dropdown-menu:before {
+			    left: 158px;
+			    border-left: 7px solid #ccc;
+			    border-right: 0;
+			}
+
+			.dropdown-menu:after {
+			    left: 157px;
+			    border-left: 6px solid #fff;
+			    border-right: 0;
+			}
+		}
+
+		.filter-menu {
+				.text-right {
+				text-align: center;
+			}
+		}
+	}	
+}

@@ -1,0 +1,100 @@
+.step-bar {
+  margin-top: 20px;
+
+  .step-bar__step-content {
+    display: inherit;
+    text-align: center;
+    flex-direction: row;
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+
+    .step-bar-container {
+      padding-bottom: 10px;
+
+      .step-bar-border {
+        height: 4px;
+        background-color: $main-color-light;
+        width: 100%;
+        position: relative;
+
+        .step-indicator {
+          width: 16px;
+          height: 16px;
+          background-color: $main-color-light;
+          border-radius: 8px;
+          position: absolute;
+          top: -6px;
+          left: 45%;
+        }
+
+        .step-indicator:before {
+          content: "";
+          width: 8px;
+          height: 8px;
+          background-color: $light-color;
+          display: block;
+          border-radius: 4px;
+          position: absolute;
+          left: 4px;
+          top: 4px;
+        }
+      }
+    }
+
+    .step-bar__step-text-container {
+      padding: 0 10px;
+
+      .sub-topic,.main-topic {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .active {
+    .step-bar-border {
+      background: linear-gradient(45deg, $secondary-color, $main-color-light);
+
+      .step-indicator {
+        background-color: $secondary-color !important;
+      }
+    }
+  }
+
+  .step-done {
+    .step-bar-border {
+      background-color: $secondary-color !important;
+
+      .step-indicator {
+        background-color: $secondary-color !important;
+      }
+
+      .step-indicator:before {
+        font-family: 'FontAwesome';
+        content: "\f00c" !important;
+        display: inline-block;
+        padding-right: 3px;
+        vertical-align: middle;
+        font-weight: 900;
+        background-color: transparent !important;
+        color: $white;
+        font-size: 9px;
+        top: 2px !important;
+        left: 3px !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .step-bar__step-text-container {
+    .main-topic {
+      font-size: 13px !important;
+    }
+
+    .sub-text {
+      display: none;
+    }
+  }
+}

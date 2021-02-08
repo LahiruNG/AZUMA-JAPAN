@@ -1,0 +1,154 @@
+.sub-menu {
+  background-color: #fff;
+  height: 48px;
+  border-bottom: 1px solid $dark-color;
+  font-size: 13px;
+
+  ul {
+    padding-left: 0;
+
+    li {
+      display: inline-block;
+      text-align: center;
+      margin-right: -3px;
+
+      a {
+        color: $main-color;
+        line-height: 48px;
+        padding: 12px 20px;
+
+        .badge-active {
+          background-color: $primary-color;
+        }
+      }
+
+      a:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .sub-menu__menu-items {
+    float: left;
+
+    .sub-menu__menu-items--active {
+      a {
+        color: $primary-color;
+        border-bottom: 3px solid $primary-color;
+      }
+    }
+
+    a:hover {
+      border-bottom: 3px solid $primary-color;
+      @include transition(all 0.2s ease 0s);
+    }
+  }
+
+  .sub-menu__view-mode {
+    float: right;
+    font-size: 14px;
+    li {
+      color: $main-color;
+      cursor: pointer;
+    }
+
+    li:hover {
+      background-color: $dark-color;
+      border-bottom: 1px solid $dark-color;
+    }
+
+    .sub-menu__view-mode--active {
+      background-color: $secondary-color;
+
+      a {
+        color: $white;
+      }
+    }
+
+    .sub-menu__grid-view {
+      border-left: 1px solid $dark-color;
+    }
+
+    .sub-menu__list-view {
+      border-right: 1px solid $dark-color;
+    }
+  }
+
+  .sub-menu__actions {
+    float: right;
+
+    .sub-menu__actions-item {
+      .sub-menu__actions-item-link {
+        color: $main-color;
+        padding: 5px 10px;
+        display: block;
+        line-height: normal;
+        background-color: $light-color;
+
+        p {
+          margin: 0;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sub-menu {
+    height: auto;
+
+    .container {
+      padding: 0;
+    }
+
+    ul {
+      margin-bottom: 0;
+    }
+
+    .sub-menu__menu-items {
+      text-align: center;
+
+      li {
+        a {
+          padding: 15px 14px;
+        }
+      }
+    }
+
+    .sub-menu__view-mode {
+      display: none;
+      float: left;
+      width: 100%;
+
+      li {
+        display: inline-block;
+        width: 50%;
+
+        a {
+          padding: 14px 18px 15px 18px;
+        }
+      }
+
+      .sub-menu__view-mode--active {
+        background-color: $secondary-color;
+      }
+
+      .sub-menu__view-mode--active:hover {
+        background-color: $secondary-color-dark;
+      }
+
+      li:hover {
+        background-color: $white;
+      }
+
+      .sub-menu__grid-view a {
+        border-left: 0;
+      }
+
+      .sub-menu__list-view a {
+        border-right: 0;
+      }
+    }
+  }
+}

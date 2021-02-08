@@ -1,0 +1,275 @@
+.list-view {
+	.list-item {
+		color: $main-color;
+		font-size: 12px;
+
+		thead {
+			tr {
+				background-color: $light-color;
+
+				th {
+					padding: 10px 15px;
+					border-top: 1px solid #dddddd !important;
+				}
+
+				.select-row {
+					width: 5%;
+				}
+
+				.name-row {
+					width: 20%;
+				}
+
+				.id-row {
+					width: 15%;
+				}
+
+				.type-row {
+					width: 15%
+				}
+
+				.status-row {
+					width: 20%;
+				}
+
+				.app-creator-row {
+					width: 10%;
+				}
+
+				.action-row {
+					width: 15%;
+				}				
+			}
+		}
+
+		tbody {
+			tr {
+				margin-top: 20px;
+				background-color: #fff;
+
+				td {
+					padding: 15px;
+
+					.actions {
+						a {
+							margin-right: 10px;
+						}
+					}
+
+					.fa.bdapps.app-type {
+						color: #2980b9;
+					}
+
+					.fa.bdappslite.app-type {
+						color: #c0392b;
+					}
+				}
+
+				.product-type-badge {
+					color: $white;
+					background-color: #1abc9c;
+					padding: 2px 12px;
+					border: 0;
+					@include border-radius(50px);
+				}
+
+				.status-badge {
+					color: $white;
+					padding: 2px 12px;
+					border: 0;
+					@include border-radius(50px);
+				}
+
+				.active-production {
+					background-color: $primary-color;
+				}
+
+				.initial {
+					background-color: $primary-color-dark;
+				}
+
+				.pending {
+					background-color: $secondary-color;
+				}
+
+				.suspended {
+					background-color: $secondary-color-dark;
+				}	
+
+				.limited-production {
+					background-color: #7B8894;
+				}
+
+				.rejected {
+					background-color: #EA6C5F;
+				}			
+			}
+
+			tr:hover {
+				background-color: $dark-color;
+			}
+		}
+	}
+}
+
+.actions {
+	.dropdown {
+
+	}
+	.dropdown-menu {
+		@include box-shadow(0, 0px, 8px, rgba(0, 0, 0, 0.2));
+		border-radius: 0;
+		top: 140%;
+		padding: 0;
+		left: -90px;
+		@include transition(all 0.5s ease 0s);
+		max-height: 0;
+	    display: block;
+	    overflow: hidden;
+	    opacity: 0;
+
+		li {
+			a {
+				padding: 8px 20px;
+				font-size: 12px;
+				margin-right: 0 !important;
+			}
+		}
+	}
+
+	.dropdown.open .dropdown-menu {
+		max-height: 233px;
+    	opacity: 1;
+	}
+}
+
+.list-view thead .select-all,
+.list-view tbody .select-row,
+.list-edit .select-all {
+	span {
+		background-image: url('../images/apps/select-circle.png');
+		background-repeat: no-repeat;
+		height: 25px;
+		width: 25px;
+		font-size: 15px;
+	}
+
+	input[type="checkbox"] {
+		cursor: pointer;
+		visibility: visible;
+		width: 20px;
+		height: 16px;
+		box-sizing: border-box;
+		padding: 0;
+		margin: 0;
+		opacity: 0;
+	}
+
+	span.checked {
+		background-image: url('../images/apps/selected.png');
+		background-repeat: no-repeat;
+		border: 0;
+		margin: 0;
+		@include transition(all 0.2s ease 0s);
+	}
+}
+
+.list-edit {
+	background-color: $white;
+	@include box-shadow(0, 0px, 8px, rgba(0, 0, 0, 0.2));
+	padding: 21px 20px;
+	position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 13px;
+    color: $main-color;
+	z-index: 1000;
+
+    .selected-app-badge {
+    	color: $white;
+    	background-color: $primary-color;
+    	padding: 2px 7px;
+    	@include border-radius(50px);
+    	margin-left: 20px;
+    	margin-right: 5px;
+    }
+
+	.selected-app-amount {
+		text-align: left;
+	}
+
+    .actions {
+    	text-align: right;
+
+    	a {
+    		text-decoration: none;
+    		margin-left: 20px;
+			display: inline-block;
+
+    		img {
+    			margin-right: 10px;
+    			margin-top: -2px;
+    		}
+
+			i {
+				padding: 5px;
+				width: 25px;
+				text-align: center;
+				@include border-radius(3px);
+			}
+    	}
+
+		a:hover {
+			color: $main-color-dark;
+		}
+    }
+
+	.list-edit__user {
+		word-break: break-all;
+	}
+
+	.list-edit__close {
+		position: absolute;
+		right: 20px;
+		top: 15px;
+
+		i {
+			padding: 10px;
+			width: 33px;
+			text-align: center;
+			background-color: $dark-color;
+			@include border-radius(50px);
+			cursor: pointer;
+		}
+	}
+}
+
+
+/*Animated css transition*/
+.animated {
+    -webkit-animation-duration: 0.4s !important;
+  	animation-duration: 0.4s !important;
+}
+
+@media screen and (max-width: 767px) {
+	.list-edit {
+		.selected-app-amount {
+			text-align: center;
+		}
+
+		.actions {
+    		text-align: center;
+    		padding-top: 20px;
+    		padding-left: 0;
+    		padding-right: 0;
+
+    		a {
+    			margin-left: 10px;
+
+    			img {
+    				margin-right: 2px;
+    			}
+    		}
+    	}
+	}
+}

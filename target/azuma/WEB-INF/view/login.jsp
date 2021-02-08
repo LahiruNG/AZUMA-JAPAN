@@ -34,7 +34,7 @@
                             <div class="row">
                                 <div class="col-lg-8 col-sm-10 col-lg-offset-2 col-sm-offset-1 text-center">
 
-                                    <h4>You have successfully created your account!</h4>
+                                    <h4>You have successfully created your account! aa</h4>
                                     <p class="sub-text">The confirmation link has been sent to your email address. Please follow the instructions in the email and complete registration within the next 10 days.</p>
 <%--                                    <p class="sub-text">If you have already verified your email, click here to <a class="link" href="login.html">login</a></p>--%>
                                 </div>
