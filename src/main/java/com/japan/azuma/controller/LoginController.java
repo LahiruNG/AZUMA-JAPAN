@@ -12,7 +12,6 @@ public class LoginController {
 
         model.addAttribute("name","Name-Data");
         return "signUp";
-        mn push krnnadahaaaa
     }
 
 
