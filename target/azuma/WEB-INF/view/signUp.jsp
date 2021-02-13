@@ -18,12 +18,17 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="<spring:url value='/resources/css/bootstrap.min.css'/>">
-        <link rel="stylesheet" type="text/css" href="<spring:url value='/resources/css/fontawesome-free-5.8.2-web/css/all.css'/>">
+    <link rel="stylesheet" type="text/css" href="<spring:url value='/resources/css/fontawesome-free-5.8.2-web/css/all.css'/>">
     <link rel="stylesheet" type="text/css" href="<spring:url value='/resources/css/animate.css'/>">
     <link rel="stylesheet" type="text/css" href="<spring:url value='/resources/css/style.css'/>">
 
 </head>
 <body>
+
+
+
+
+
 <div class="login-overlay"></div>
 <div class="login-back"></div>
 <div class="wrapper">
@@ -43,7 +48,7 @@
                         <form>
                             <div class="row">
                                 <div class="col-lg-8 col-sm-10 col-lg-offset-2 col-sm-offset-1 text-center">
-                                    <h4>Create Service Provider Account</h4>
+                                    <h4>Create Account</h4>
                                     <div class="input-group margin-top-20">
                                         <span class="input-group-addon"><i class="fa fa-user"></i></span> <input class="form-control" placeholder="Username">
                                     </div>
@@ -56,35 +61,16 @@
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-lock"></i></span> <input class="form-control" placeholder="Password" type="password">
                                     </div>
-                                    <div class="input-group text-left">
-                                        <p class="sub-text">Choose verification Method</p>
-                                        <ul class="common-list">
-                                            <li>
-                                                <label class="check-container">Email
-                                                    <input type="radio" checked="" name="verification-method" value="email">
-                                                    <span class="checkmark-radio"></span>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="check-container">Mobile Number
-                                                    <input type="radio" name="verification-method" value="mobile-number">
-                                                    <span class="checkmark-radio"></span>
-                                                </label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <a href="otp.html" class="btn primary-btn full-width margin-top-20">Continue</a>
+
+                                    <a href=" " class="btn primary-btn full-width margin-top-20">Sign Up</a>
                                     <div class="row">
-                                        <div class="col-xs-7 login-body__left-link margin-top-20">
+                                        <div class="col-xs-12 login-body__left-link margin-top-20" style="text-align: center">
                                             <p class="sub-text">Already have an account?</p>
-                                            <a href="#" class="link">Login</a>
+                                            <a href="#" class="link">Sign In</a>
                                         </div>
-                                        <div class="col-xs-5 login-body__right-link margin-top-20">
-                                            <p class="sub-text">Find apps</p>
-                                            <a href="#" class="link">Appstore</a>
-                                        </div>
+
                                     </div>
-                                    <p class="small-text margin-top-20">By creating an account, you are agreeing to our <a href="terms-and-conditions.html">Terms and Conditions.</a></p>
+<%--                                    <p class="small-text margin-top-20">By creating an account, you are agreeing to our <a href="terms-and-conditions.html">Terms and Conditions.</a></p>--%>
                                 </div>
                             </div>
                         </form>
