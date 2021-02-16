@@ -1,4 +1,5 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: akila
@@ -22,8 +23,16 @@
     <link rel="stylesheet" type="text/css" href="<spring:url value='/resources/css/animate.css'/>">
     <link rel="stylesheet" type="text/css" href="<spring:url value='/resources/css/style.css'/>">
 
+    <style>
+        .error{color:red}
+    </style>
+
 </head>
 <body>
+<<<<<<< Updated upstream
+=======
+signUpMessage
+>>>>>>> Stashed changes
 <div class="login-overlay"></div>
 <div class="login-back"></div>
 <div class="wrapper">
@@ -40,22 +49,48 @@
                         </div>
                     </div>
                     <div class="login-body">
-                        <form>
+                        <form:form method="post" action="signUp" modelAttribute="signUpBean">
                             <div class="row">
                                 <div class="col-lg-8 col-sm-10 col-lg-offset-2 col-sm-offset-1 text-center">
+<<<<<<< Updated upstream
                                     <h4>Create Service Provider Account</h4>
+=======
+                                    <h4>Create Account</h4>
+
+                                    <div class="text-left">
+                                        <form:errors path="fname" cssClass="error" />
+                                    </div>
                                     <div class="input-group margin-top-20">
-                                        <span class="input-group-addon"><i class="fa fa-user"></i></span> <input class="form-control" placeholder="Username">
+                                        <span class="input-group-addon"><i class="fa fa-user"></i></span> <form:input class="form-control" placeholder="first name" path="fname"/>
+                                    </div>
+
+                                    <div class="text-left">
+                                        <form:errors path="lname" cssClass="error" />
+                                    </div>
+>>>>>>> Stashed changes
+                                    <div class="input-group margin-top-20">
+                                        <span class="input-group-addon"><i class="fa fa-user"></i></span> <form:input class="form-control" placeholder="last name" path="lname"/>
+                                    </div>
+                                    <div class="text-left">
+                                        <form:errors path="email" cssClass="error" />
                                     </div>
                                     <div class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-envelope"></i></span> <input class="form-control" placeholder="Email">
+                                        <span class="input-group-addon"><i class="fa fa-envelope"></i></span> <form:input type="email" class="form-control" placeholder="Email" path="email"/>
+                                    </div>
+                                    <div class="text-left">
+                                        <form:errors path="mobile" cssClass="error" />
                                     </div>
                                     <div class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-mobile fa-lg"></i></span> <input class="form-control" placeholder="Mobile Number 94xxxxxxxxx">
+                                        <span class="input-group-addon"><i class="fa fa-mobile fa-lg"></i></span> <form:input class="form-control" placeholder="Mobile Number 94xxxxxxxxx" path="mobile"/>
                                     </div>
+                                    <div class="text-left">
+                                        <form:errors path="password" cssClass="error" />
+                                    </div>
+
                                     <div class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-lock"></i></span> <input class="form-control" placeholder="Password" type="password">
+                                        <span class="input-group-addon"><i class="fa fa-lock"></i></span> <form:input class="form-control" placeholder="Password" type="password" path="password"/>
                                     </div>
+<<<<<<< Updated upstream
                                     <div class="input-group text-left">
                                         <p class="sub-text">Choose verification Method</p>
                                         <ul class="common-list">
@@ -85,9 +120,21 @@
                                         </div>
                                     </div>
                                     <p class="small-text margin-top-20">By creating an account, you are agreeing to our <a href="terms-and-conditions.html">Terms and Conditions.</a></p>
+=======
+
+                                    <input type="submit" value="Sign Up" class="btn primary-btn full-width margin-top-20"/>
+                                    <div class="row">
+                                        <div class="col-xs-12 login-body__left-link margin-top-20" style="text-align: center">
+                                            <p class="sub-text">Don't have an account?</p>
+                                            <a href="#" class="link">Sign Up</a>
+                                        </div>
+                                    </div>
+
+<%--                                    <p class="small-text margin-top-20">By creating an account, you are agreeing to our <a href="terms-and-conditions.html">Terms and Conditions.</a></p>--%>
+>>>>>>> Stashed changes
                                 </div>
                             </div>
-                        </form>
+                        </form:form>
                     </div>
                 </div>
             </div>

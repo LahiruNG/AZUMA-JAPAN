@@ -1,5 +1,9 @@
 Manifest-Version: 1.0
 Created-By: IntelliJ IDEA
 Built-By: akila
+<<<<<<< Updated upstream
 Build-Jdk: Amazon Corretto version 11.0.9
+=======
+Build-Jdk: version 1.8.0_144
+>>>>>>> Stashed changes
 
